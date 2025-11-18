@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration form</title>
+</head>
+<body>
+    <style>
+        form {
+            width: 350px;
+            padding: 20px;
+            border: 1px solid #aaa;
+            border-radius: 8px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            margin-bottom: 12px;
+            padding: 8px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Student Registration Form</h2>
+
+<form onsubmit="return validateForm()">
+
+    <div class="error" id="errorMsg"></div>
+
+    <label>Full Name:</label>
+    <input type="text" id="name">
+
+    <label>Email:</label>
+    <input type="text" id="email">
+
+    <label>Mobile Number:</label>
+    <input type="text" id="mobile">
+
+    <label>Password:</label>
+    <input type="password" id="password">
+
+    <label>Confirm Password:</label>
+    <input type="password" id="confirmPassword">
+
+    <input type="submit" value="Register">
+</form>
+
+<script>
+function validateForm() {
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let mobile = document.getElementById("mobile").value.trim();
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+    let error = document.getElementById("errorMsg");
+
+    error.innerHTML = "";
+
+    if (name === "" || email === "" || mobile === "" || password === "" || confirmPassword === "") {
+        error.innerHTML = "All fields are required!";
+        return false;
+    }
+
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.match(emailPattern)) {
+        error.innerHTML = "Enter a valid email address!";
+        return false;
+    }
+
+    if (!/^[0-9]{10}$/.test(mobile)) {
+        error.innerHTML = "Mobile number must be 10 digits!";
+        return false;
+    }
+
+    if (password.length < 6) {
+        error.innerHTML = "Password must be at least 6 characters!";
+        return false;
+    
+    if (password !== confirmPassword) {
+        error.innerHTML = "Passwords do not match!";
+        return false;
+    }
+
+    alert("Registration Successful!");
+    return true;
+}
+</script>
+
+</body>
+</html>
+</body>
+</html>
