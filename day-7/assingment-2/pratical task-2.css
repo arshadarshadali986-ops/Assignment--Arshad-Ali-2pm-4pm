@@ -1,0 +1,39 @@
+/* Universal selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ID selectors */
+#header {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+#about {
+    background-color: lightblue;
+}
+
+#services {
+    background-color: lightgreen;
+}
+
+#contact {
+    background-color: lightcoral;
+}
+
+#footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Class selector */
+.section {
+    padding: 40px;
+    text-align: center;
+}
