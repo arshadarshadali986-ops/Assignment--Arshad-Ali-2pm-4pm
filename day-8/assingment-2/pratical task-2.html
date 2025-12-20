@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pricing Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .pricing-table {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .plan {
+            width: 220px;
+            padding: 20px;          /* Inner spacing */
+            background-color: white;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .basic {
+            border: 3px solid #3498db;   /* Solid border */
+        }
+
+        .standard {
+            border: 3px dashed #27ae60;  /* Dashed border */
+        }
+
+        .premium {
+            border: 5px double #e74c3c;  /* Double border */
+        }
+
+        .plan h2 {
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 24px;
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .plan p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pricing-table">
+        <div class="plan basic">
+            <h2>Basic</h2>
+            <div class="price">₹499</div>
+            <p>1 Project</p>
+            <p>Email Support</p>
+        </div>
+
+        <div class="plan standard">
+            <h2>Standard</h2>
+            <div class="price">₹999</div>
+            <p>5 Projects</p>
+            <p>Priority Support</p>
+        </div>
+
+        <div class="plan premium">
+            <h2>Premium</h2>
+            <div class="price">₹1499</div>
+            <p>Unlimited Projects</p>
+            <p>24/7 Support</p>
+        </div>
+    </div>
+
+</body>
+</html>
