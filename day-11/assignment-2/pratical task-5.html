@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Page Grid Layout</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Grid container */
+.layout {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  grid-template-columns: 250px 1fr; /* Sidebar width + content flexible */
+  grid-template-rows: 60px 1fr 60px; /* Header + content + footer height */
+  height: 100vh; /* Full viewport height */
+}
+
+/* Header */
+.header {
+  grid-area: header;
+  background-color: #2a9d8f;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 1.5rem;
+}
+
+/* Sidebar */
+.sidebar {
+  grid-area: sidebar;
+  background-color: #264653;
+  color: white;
+  padding: 20px;
+}
+
+/* Main content */
+.content {
+  grid-area: content;
+  padding: 20px;
+  background-color: #f0f0f0;
+  overflow-y: auto; /* Scroll if content overflows */
+}
+
+/* Footer */
+.footer {
+  grid-area: footer;
+  background-color: #e76f51;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Responsive: Sidebar moves on top for small screens */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px auto 1fr 60px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="layout">
+  <div class="header">My Website</div>
+  <div class="sidebar">
+    <h3>Sidebar Menu</h3>
+    <ul>
+      <li><a href="#" style="color:white;text-decoration:none;">Home</a></li>
+      <li><a href="#" style="color:white;text-decoration:none;">About</a></li>
+      <li><a href="#" style="color:white;text-decoration:none;">Services</a></li>
+      <li><a href="#" style="color:white;text-decoration:none;">Contact</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <h2>Main Content</h2>
+    <p>This is the main content area. You can place articles, images, or any other content here. The content area will expand to fill the remaining space next to the sidebar.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec ex eget metus sollicitudin aliquam. Curabitur convallis, justo nec ultricies dictum, justo orci hendrerit leo, et facilisis urna lorem a leo.</p>
+  </div>
+  <div class="footer">Footer © 2026</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2 Column Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .grid-item {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        .grid-item:nth-child(2) {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="grid-item">Column 1 (1fr)</div>
+    <div class="grid-item">Column 2 (2fr)</div>
+</div>
+
+</body>
+</html>

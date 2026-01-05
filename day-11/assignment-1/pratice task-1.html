@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Block vs Inline</title>
+    <style>
+        .block-box {
+            display: block;
+            width: 100%;
+            background-color: #4caf50;
+            color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .inline-text {
+            display: inline;
+            background-color: #ff9800;
+            color: white;
+            padding: 4px 8px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="block-box">
+    I am a block element and span the full width
+</div>
+
+<p>
+    This is normal text and
+    <span class="inline-text">INLINE ELEMENT</span>
+    appears beside the text.
+</p>
+
+</body>
+</html>
