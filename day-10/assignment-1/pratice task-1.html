@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Format Boxes</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 20px;
+            margin: 40px;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: Arial;
+        }
+
+        .box1 {
+            background-color: blue;
+        }
+
+        .box2 {
+            background-color: #ff5733;
+        }
+
+        .box3 {
+            background-color: rgb(60, 179, 113);
+        }
+
+        .box4 {
+            background-color: hsl(280, 70%, 50%);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="box box1">Color Name</div>
+    <div class="box box2">HEX</div>
+    <div class="box box3">RGB</div>
+    <div class="box box4">HSL</div>
+</div>
+
+</body>
+</html>
