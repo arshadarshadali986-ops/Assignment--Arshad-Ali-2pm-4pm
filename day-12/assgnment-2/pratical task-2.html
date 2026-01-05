@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Header with Logo + Nav + Action</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 70px;
+    background-color: #333;
+    color: white;
+  }
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  nav {
+    flex: 1;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;    
+     gap: 30px;     
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  nav a:hover, nav a:focus {
+    color: #ffcc00;
+    outline: none;
+  }
+
+  .cta {
+    background-color: #ff6600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .cta:hover, .cta:focus {
+    background-color: #e55b00;
+    outline: none;
+  }
+
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: stretch;
+      height: auto;
+      gap: 10px;
+    }
+    
+    nav ul {
+      justify-content: space-around;
+    }
+
+    .cta {
+      align-self: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">MyLogo</div>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <button class="cta">Sign Up</button>
+</header>
+
+</body>
+</html>

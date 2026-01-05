@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Toolbar</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+
+  .toolbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    gap: 20px; 
+  }
+
+  /* Filter group */
+  .filters {
+    display: flex;
+    gap: 10px;
+  }
+
+  .filters select {
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+
+  .search {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+  }
+
+  .search input {
+    width: 60%;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+
+  .actions {
+    display: flex;
+    gap: 10px;
+    margin-left: auto; 
+  }
+
+  .actions button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .actions button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="filters">
+    <select>
+      <option>All</option>
+      <option>Open</option>
+      <option>Closed</option>
+    </select>
+    <select>
+      <option>Priority</option>
+      <option>High</option>
+      <option>Medium</option>
+      <option>Low</option>
+    </select>
+  </div>
+
+  <div class="search">
+    <input type="text" placeholder="Search...">
+  </div>
+
+  <div class="actions">
+    <button>Export</button>
+    <button>Settings</button>
+  </div>
+</div>
+
+</body>
+</html>

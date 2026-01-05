@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Photo Grid</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+  }
+
+  .photo-grid {
+    display: flex;
+    gap: 15px;
+    align-items: center; 
+    overflow-x: auto; 
+    padding: 10px 0;
+  }
+
+  .photo-grid img {
+    flex: 1 1 200px; 
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+
+  .photo-grid img:hover {
+    transform: scale(1.05); 
+  }
+
+  /* Make grid responsive */
+  @media (max-width: 768px) {
+    .photo-grid {
+      flex-wrap: wrap; 
+    }
+    .photo-grid img {
+      flex: 1 1 calc(50% - 15px);
+      margin-bottom: 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .photo-grid img {
+      flex: 1 1 100%; 
+    }
+  }
+</style>
+</head>
+<body>
+
+<h2>Photo Grid Row</h2>
+
+<div class="photo-grid">
+  <img src="https://picsum.photos/300/200?random=1" alt="Photo 1">
+  <img src="https://picsum.photos/300/200?random=2" alt="Photo 2">
+  <img src="https://picsum.photos/300/200?random=3" alt="Photo 3">
+  <img src="https://picsum.photos/300/200?random=4" alt="Photo 4">
+  <img src="https://picsum.photos/300/200?random=5" alt="Photo 5">
+</div>
+
+</body>
+</html>
+
+

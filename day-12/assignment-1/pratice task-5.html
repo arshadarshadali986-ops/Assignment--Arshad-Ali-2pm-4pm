@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flex Text Overflow Fix</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+
+  .flex-container {
+    display: flex;
+    width: 400px; 
+    border: 1px solid #333;
+  }
+
+  .flex-item {
+    background-color: #f0f0f0;
+    padding: 10px;
+    flex: 1;       
+    min-width: 0;  
+    border: 1px solid #999;
+  }
+
+  .flex-item p {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>
+</head>
+<body>
+
+<div class="flex-container">
+  <div class="flex-item">
+    <p>This is some really long text that would normally overflow the flex item if min-width is not set.</p>
+  </div>
+  <div class="flex-item">
+    <p>Short text</p>
+  </div>
+</div>
+
+</body>
+</html>

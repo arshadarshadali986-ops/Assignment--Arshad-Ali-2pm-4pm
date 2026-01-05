@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3-Item Card Row</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+
+  /* Container for cards */
+  .card-row {
+    display: flex;
+    gap: 20px; /* Space between cards */
+  }
+
+  /* Individual cards */
+  .card {
+    flex: 1; /* Equal width */
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+
+  /* Hover effect */
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+</style>
+</head>
+<body>
+
+<div class="card-row">
+  <div class="card">
+    <h3>Card 1</h3>
+    <p>This is the first card.</p>
+  </div>
+  <div class="card">
+    <h3>Card 2</h3>
+    <p>This is the second card.</p>
+  </div>
+  <div class="card">
+    <h3>Card 3</h3>
+    <p>This is the third card.</p>
+  </div>
+</div>
+
+</body>
+</html>
