@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Hero</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fa;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      padding: 2rem;
+      gap: 2rem;
+      background: linear-gradient(135deg, #4f46e5, #9333ea);
+      color: #fff;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      max-width: 500px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-buttons a {
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: #fff;
+      color: #4f46e5;
+    }
+
+    .btn-primary:hover {
+      background: #e0e7ff;
+    }
+
+    .btn-secondary {
+      border: 2px solid #fff;
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 450px;
+      margin: auto;
+      display: block;
+    }
+
+    /* DESKTOP VIEW */
+    @media (min-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr 1fr;
+        padding: 4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Build Modern Web Experiences</h1>
+      <p>
+        Learn HTML, CSS, and JavaScript to create fast, responsive,
+        and user-friendly websites for all devices.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#" class="btn-primary">Get Started</a>
+        <a href="#" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://via.placeholder.com/500x400" alt="Hero Illustration">
+    </div>
+  </section>
+
+</body>
+</html>
